@@ -54,43 +54,43 @@ To optimize performance and circumvent deployment locks on traditional serverles
 Follow these steps to run a copy of this project locally on your machine:
 
 ### 1. Clone the Repository
-\`\`\`bash
+```bash
 git clone https://github.com/NobleXavier7/amazon_clone.git
 cd amazon_clone
-\`\`\`
+```
 
 ### 2. Setup Your Environment Variables
 Create a `.env` file inside the `functions` directory:
-\`\`\`text
+```text
 STRIPE_SECRET_KEY=your_stripe_secret_key_here
-\`\`\`
+```
 
 ### 3. Install Frontend Dependencies
 Run this in the root folder to install packages for the React UI:
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 ### 4. Install Backend Dependencies
 Navigate to the backend folder and install its core requirements:
-\`\`\`bash
+```bash
 cd functions
 npm install
 cd ..
-\`\`\`
+```
 
 ### 5. Fire Up the Local Environments
 Run both environments concurrently as separate local terminal instances:
 
 * **Launch Frontend UI:**
-\`\`\`bash
+```bash
 npm start
-\`\`\`
+```
 
 * **Launch Backend Server:**
-\`\`\`bash
+```bash
 cd functions && node index.js
-\`\`\`
+```
 
 ---
 
