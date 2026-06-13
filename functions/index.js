@@ -1,4 +1,4 @@
-const functions = require("firebase-functions");
+const functions = require("firebase-functions/v1");
 const express = require("express");
 const cors = require("cors");
 const stripe = require("stripe")(
@@ -34,4 +34,10 @@ app.post("/payments/create", async (req, res) => {
 });
 
 // - Listen command
-exports.api = functions.https.onRequest(app);
+// ❌ OLD LINE: exports.api = functions.https.onRequest(app);
+
+//  NEW LINE:
+exports.paymentApi = functions.https.onRequest(app);
+// Add this at the very bottom of functions/index.js
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
